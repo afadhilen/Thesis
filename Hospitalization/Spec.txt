@@ -1,0 +1,79 @@
+CREATE TABLE `hospitalization`.`doctor_mitra_cikarang` ( `no` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(20) NOT NULL , `specialist` VARCHAR(20) NOT NULL , `hospital` VARCHAR(50) NOT NULL , `address` VARCHAR(100) NOT NULL , `schedule` TEXT NOT NULL ) ENGINE = InnoDB;
+
+--Siloam Cikarang--
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Medical Rehabilitation' WHERE no BETWEEN 1 and 4
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Urologist' WHERE no BETWEEN 5 and 6
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Internist' WHERE no BETWEEN 7 and 12
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Obstetrician and Gynecologist' WHERE no BETWEEN 13 and 17
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Neuro Surgeon' WHERE no = 18
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Cardio Thoraric & Vascular Sur' WHERE no = 19
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Anaesthetic' WHERE no BETWEEN 20 and 22
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'ENT/THT' WHERE no BETWEEN 23 and 25
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Pediatrician' WHERE no BETWEEN 26 and 33
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Opthalmologist' WHERE no BETWEEN 34 and 36
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Pediatric Surgeon' WHERE no = 37
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Anatomical Pathologist' WHERE no = 38
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Clinical Pathologist' WHERE no = 39
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Surgeon - Orthopedics & Trauma' WHERE no BETWEEN 40 and 43
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Cardiologist' WHERE no BETWEEN 44 and 45
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Dermato-Venerologist' WHERE no BETWEEN 46 and 48
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Neurologist' WHERE no BETWEEN 49 and 50
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Surgeon' WHERE no BETWEEN 51 and 52
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Pulmonologist' WHERE no BETWEEN 53 and 54
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Plastic & Reconstruction Surge' WHERE no = 55
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Radiology' WHERE no BETWEEN 56 and 57
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Digestive Surgeon' WHERE no = 58
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Psychiatrist' WHERE no = 59
+UPDATE `doctor_siloam_cikarang` SET `specialist`= 'Dentist' WHERE no BETWEEN 60 and 66
+
+--SIloam Jambi--
+UPDATE `doctor` SET `Specialist`= 'Internist' WHERE d_no BETWEEN 33 and 37
+UPDATE `doctor` SET `Specialist`= 'Neuro Surgeon' WHERE d_no BETWEEN 38 and 39
+UPDATE `doctor` SET `Specialist`= 'Orthopedic Surgeon - Spine Con' WHERE d_no = 40
+UPDATE `doctor` SET `Specialist`= 'Obstetrician and Gynecologist' WHERE d_no BETWEEN 41 and 44
+UPDATE `doctor` SET `Specialist`= 'Clinical Pathologist' WHERE d_no = 45
+UPDATE `doctor` SET `Specialist`= 'Anatomical Pathologist' WHERE d_no = 46
+UPDATE `doctor` SET `Specialist`= 'Medical Rehabilitation' WHERE d_no = 47
+UPDATE `doctor` SET `Specialist`= 'Orthopedic Surgeon' WHERE d_no BETWEEN 48 and 49
+UPDATE `doctor` SET `Specialist`= 'Pediatrician' WHERE d_no BETWEEN 50 and 52
+UPDATE `doctor` SET `Specialist`= 'Cardiologist' WHERE d_no = 53
+UPDATE `doctor` SET `Specialist`= 'Oncology Surgeon' WHERE d_no = 54
+UPDATE `doctor` SET `Specialist`= 'Obstetrician and Gynecologist - Oncology Consultant' WHERE d_no = 55
+UPDATE `doctor` SET `Specialist`= 'Dermato-Venerologist' WHERE d_no = 56
+UPDATE `doctor` SET `Specialist`= 'Pulmonologist' WHERE d_no = 57
+UPDATE `doctor` SET `Specialist`= 'Psychiatrist' WHERE d_no = 58
+UPDATE `doctor` SET `Specialist`= 'Opthalmologist' WHERE d_no = 59
+UPDATE `doctor` SET `Specialist`= Urologist' WHERE d_no = 60
+UPDATE `doctor` SET `Specialist`= 'Orthodontist' WHERE d_no = 61
+UPDATE `doctor` SET `Specialist`= 'Dentist' WHERE d_no BETWEEN 62 and 64
+UPDATE `doctor` SET `Specialist`= 'Phrosthodontist' WHERE d_no = 65
+UPDATE `doctor` SET `Specialist`= 'Psychologist' WHERE d_no = 66
+UPDATE `doctor` SET `Specialist`= 'Nutritionist' WHERE d_no BETWEEN 67 and 68
+
+
+7-10 = Anesthetic
+11-13 = Neurologist
+14-18 = Surgeon
+19-32 = General Practitioner
+33-37= Internist
+38-39=Neuro Surgeon
+40 = Orthopedic Surgeon - Spine Con
+41-44 = Obstetrician and Gynecologist
+45 = Clinical Pathologist
+46 = Anatomical Pathologist
+47 = Medical Rehabilitaion
+48-49=Orthopedic Surgeon
+50-52=Pediatrician
+53=Cardiologist
+54=Oncology Surgeon
+55=Obstetrician and Gynecologist - Oncology Consultant
+56=Dermato-Venerologist
+57=Pulmonologist
+58=Psychiatrist
+59=Opthalmologist
+60=Urologist
+61=Orthodontist
+62-64=Dentist
+65=Phrosthodontist
+66=Psychologist
+67-68=Nutritionist
