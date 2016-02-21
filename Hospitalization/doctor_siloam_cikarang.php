@@ -7,7 +7,7 @@
 	<body>
 		<?php
 		//require 'libs/simple_html_dom.php';
-		include('libs/simple_html_dom.php');
+		include_once('libs/simple_html_dom.php');
 		//$html = new simple_html_dom();
 		$url = "http://www.siloamhospitals.com/doctors/find.html?hospital=17";
 		$url2 = "http://www.siloamhospitals.com/our-hospitals/read/siloam-hospitals-jambi.html";
