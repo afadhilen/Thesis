@@ -13,12 +13,15 @@
 		<h1>
 			<center>Hospitalization</center>
 		</h1>
-		<center>
 			<table>
-				<h2>Siloam Hospital</h2>
 				<tr>
+				<th>Siloam Hospital</th>
 					<td><a href = '<?php echo base_url() . 'c_doctor/siloam_jambi/' ?>' class="btn btn-primary btn-sm"> Jambi </a></td>
 			        <td><a href = '<?php echo base_url() . 'c_doctor/siloam_cikarang/' ?>' class="btn btn-default btn-sm"> Cikz </a></td>
+	        	</tr>
+	        	<tr>
+	        	<th>Mitra Hospital </th>
+	        		<td><a href='<?php echo base_url() . 'c_doctor_mitra/mitra_cikarang/' ?>' class="btn btn-primary btn-sm"> Show </a></td>
 	        	</tr>
 	        </table>
 	        <br/>
