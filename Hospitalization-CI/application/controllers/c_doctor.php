@@ -83,14 +83,19 @@ class C_doctor extends CI_Controller {
 		$this->load->view('v_doctor_siloam_cikarang', array('list_data' => $data1));
     }
 
-    public function schedule_siloam_jambi(){
+    public function schedule_siloam(){
     	$url = "http://www.siloamhospitals.com/doctors/find.html?hospital=22";
     	$html = file_get_html($url);
-    	$link = array('link_doctor' => $html->find('div[class="col-md-11"] a', 0)->href);
+    	$url_2 = "http://www.siloamhospitals.com/doctors/find.html?hospital=17";
+    	$html_2 = file_get_html($url_2);
+    	$link = array(
+    					'link_doctor' => $html->find('div[class="col-md-11"] a'),
+    					'link_doctor_2' => $html_2->find('div[class="col-md-11"] a')
+    				 );
 
     	$this->load->view('v_schedule', $link);
     }
-
+    
 
     public function search_doctor(){
 
