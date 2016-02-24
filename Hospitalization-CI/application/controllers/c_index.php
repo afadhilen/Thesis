@@ -9,7 +9,7 @@ if (!defined('BASEPATH'))
 class C_index extends CI_Controller {
 
     public function index() {
-        $this->load->view('v_doctor');
+        $this->load->view('v_index');
     }
 }
 
