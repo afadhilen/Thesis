@@ -21,7 +21,6 @@
 	<?php foreach ($name_1 as $doc_name_1) { ?>
 	<tr>
 		<td><?php echo $doc_name_1;?></td>
-
 	</tr>
 		<?php } ?>
 		<?php foreach ($name_2 as $doc_name_2) { ?>
@@ -47,6 +46,21 @@
 		<?php foreach ($name_5 as $doc_name_5) { ?>
 	<tr>
 		<td><?php echo $doc_name_5;?></td>
+	</tr>
+		<?php } ?>
+		<?php foreach ($name_6 as $doc_name_6) { ?>
+	<tr>
+		<td><?php echo $doc_name_6;?></td>
+	</tr>
+		<?php } ?>
+		<?php foreach ($name_7 as $doc_name_7) { ?>
+	<tr>
+		<td><?php echo $doc_name_7;?></td>
+	</tr>
+		<?php } ?>
+		<?php foreach ($name_8 as $doc_name_8) { ?>
+	<tr>
+		<td><?php echo $doc_name_8;?></td>
 	</tr>
 		<?php } ?>
 	</table>
