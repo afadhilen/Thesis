@@ -5,6 +5,11 @@ if (!defined('BASEPATH'))
 
 class Hospitalization_model extends CI_Model {
 
+    public function getdata_hospital(){
+        $query = $this->db->query('SELECT * FROM hospital');
+        return $query->result_array();
+    }
+
     public function getdata_siloam_jambi() {
     	$query = $this->db->query('SELECT * FROM doctor_siloam_jambi');
     	return $query->result_array();
