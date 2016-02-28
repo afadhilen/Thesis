@@ -87,21 +87,20 @@
 		$url6 = "http://www.harapan-keluarga.co.id/hubungi-kami/";
 		$html6 = file_get_html($url6);
 		$name6 = $html6->find('div[class="footer-widget-box footer-widget-box-last"] ul[class="widget-container"] h3');
-		$address6 = $html6->find('div[class="entry clearfix"] p',0);
+		$address6 = $html6->find('div[class="entry clearfix"] p', 1);
 		//$phone2 = $html2->find('div[class="col-md-6"] div[class="row"] div[class="col-md-9"]', 1);
-		//$email2 = $html2->find('div[class="wpb_text_column wpb_content_element"] div[class="wpb_wrapper"] p', 1);
-
-		foreach ($name6 as $nme2) {
+		$email2 = $html6->find('div[class="entry clearfix"] p', 2);
+		foreach ($name6 as $nme6) {
 			echo($nme6);
 		}
 			echo($address6);
 			//echo($phone2);
-			//echo($email2);
+			echo($email2);
 			echo "<hr>";
 
 		$url7 = "http://hosana-medica.com/lippo-cikarang/";
 		$html7 = file_get_html($url7);
-		$name2 = $html2->find('div[class="su-column-inner su-clearfix"] strong', 0);
+		$name7 = $html7->find('div[class="su-column-inner su-clearfix"] strong', 0);
 		$address7 = $html7->find('div[class="su-column-inner su-clearfix"]', 0)->plaintext;
 		$phone7 = $html7->find('div[class="su-column-inner su-clearfix"] p', 0);
 		$email7 = $html7->find('div[class="su-column-inner su-clearfix"] p', 2);
@@ -160,13 +159,7 @@
 		echo($address0);
 			echo($phone0);
 			echo($email0);
-			echo "<hr>";
-
-
-
-
-		
-		
+			echo "<hr>";		
 		?>
 
 	</body>
