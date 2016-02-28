@@ -20,6 +20,30 @@ class Hospitalization_model extends CI_Model {
     	return $query->result_array();
     }
 
+    public function search_doctor($name){
+        $this->db->like('name', $name);
+        $query = $this->db->get('doctor_siloam_jambi');
+        $output = "";
+    
+    if ($name == ""){
+        return "Empty field-box!";
+    }
+    else{
+        if ($query->num_rows() < 0) {
+            return 'There was no search result!';
+        } else {
+            foreach ($query->result() as $data) {
+                $output .= '<tr> <td>' .$data->no.'</td> <td>' .$data->name.'</td> <td>'.$data->specialist. '</td> <td>'.$data->hospital.'</td></tr>';
+            }
+            if ($output == ""){
+                return "Empty field-box!";
+            }
+            else{
+            return $output;
+            }
+        }   
+    }
+}
     public function checkdata($name){
     	$this->db->select('*');
         $this->db->from('doctor');

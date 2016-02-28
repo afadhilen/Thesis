@@ -95,13 +95,6 @@ class C_doctor_siloam extends CI_Controller {
 
     	$this->load->view('v_schedule', $link);
     }
-    
-
-    public function search_doctor(){
-
-    	$this->load->view('v_search');
-
-    }
 }
 
 ?>

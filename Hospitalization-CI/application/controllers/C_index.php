@@ -18,6 +18,10 @@ class C_index extends CI_Controller {
     	$this->load->view('v_home');
     }
     
+    public function search_doctor(){
+    	$this->load->view('v_search');
+    }
+    
     public function getHospital(){		
 		$this->db->select('*');
 		$this->db->from('hospital');
@@ -98,6 +102,17 @@ class C_index extends CI_Controller {
 		$data1 = $this->hospitalization_model->getdata_hospital();
 		$this->load->view('v_page', array('list_hospital' => $data1));
     }
+
+    public function search(){
+
+    	$this->load->model('hospitalization_model');
+    	$name = $this->input->post('search');
+    	$data['result'] = $this->hospitalization_model->search_doctor($name);
+    	
+    	$this->load->view('v_search', $data);
+    }
+
+
 }
 
 ?>
