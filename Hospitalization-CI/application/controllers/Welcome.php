@@ -27,4 +27,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('parser');
 	}
+	public function mitra()
+	{
+		$this->load->view('mitra');
+	}
 }

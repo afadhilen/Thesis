@@ -104,15 +104,12 @@ class C_index extends CI_Controller {
     }
 
     public function search(){
-
     	$this->load->model('hospitalization_model');
     	$name = $this->input->post('search');
-    	$data['result'] = $this->hospitalization_model->search_doctor($name);
-    	
-    	$this->load->view('v_search', $data);
+    	$data = array('result' => $this->hospitalization_model->search_doctor($name));
+    		
+		$this->load->view('v_search', $data);
     }
-
-
 }
 
 ?>

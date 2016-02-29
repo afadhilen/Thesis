@@ -20,41 +20,37 @@ class Hospitalization_model extends CI_Model {
     	return $query->result_array();
     }
 
-    public function search_doctor($name){
-        $this->db->like('name', $name);
-        $query = $this->db->get('doctor_siloam_jambi');
-        $output = "";
-    
-    if ($name == ""){
-        return "Empty field-box!";
+    public function getdata_mitra_cikarang(){
+        $query = $this->db->query('SELECT * FROM doctor_mitra_cikarang');
+        return $query->result_array();
+
     }
-    else{
-        if ($query->num_rows() < 0) {
+
+    public function search_doctor($name){
+        // $this->db->like('name', $name);
+        // $query = $this->db->get('doctor_siloam_jambi');
+        $output = "";
+
+        $query1 = $this->db->select('*')->like('name', $name)->get('doctor_siloam_jambi');
+        $query2 = $this->db->select('*')->like('name', $name)->get('doctor_siloam_cikarang');
+
+        if ($name == ""){
+            return "Empty field-box!";
+        }
+        else{
+        if ($query1->num_rows() == 0 || $query2->num_rows() == 0 ) {
             return 'There was no search result!';
         } else {
-            foreach ($query->result() as $data) {
+            foreach ($query1->result() as $data) {
                 $output .= '<tr> <td>' .$data->no.'</td> <td>' .$data->name.'</td> <td>'.$data->specialist. '</td> <td>'.$data->hospital.'</td></tr>';
-            }
-            if ($output == ""){
-                return "Empty field-box!";
-            }
-            else{
-            return $output;
-            }
-        }   
-    }
-}
-    public function checkdata($name){
-    	$this->db->select('*');
-        $this->db->from('doctor');
-        $this->db->where('name', $name);
-        $query = $this->db->get();
-
-        if ($query->num_rows() > 0) {
-            return false;
-        } else {
-            return true;
+                }
+            foreach ($query2->result() as $data) {
+                $output .= '<tr> <td>' .$data->no.'</td> <td>' .$data->name.'</td> <td>'.$data->specialist. '</td> <td>'.$data->hospital.'</td></tr>';
+                }
+            
+            }   
         }
+        return $output;
     }
 }
 
