@@ -25,6 +25,16 @@ class Hospitalization_model extends CI_Model {
         return $query->result_array();
 
     }
+    public function getdata_mitra_bekasi(){
+        $query = $this->db->query('SELECT * FROM doctor_mitra_bekasi');
+        return $query->result_array();
+
+    }
+    public function getdata_mitra_bekasi_timur(){
+        $query = $this->db->query('SELECT * FROM doctor_mitra_bekasi_timur');
+        return $query->result_array();
+
+    }
 
     public function search_doctor($name){
         // $this->db->like('name', $name);

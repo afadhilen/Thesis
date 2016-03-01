@@ -31,4 +31,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('mitra');
 	}
+	public function loops()
+	{
+		$this->load->view('links_loops');
+	}
 }
