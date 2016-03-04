@@ -24,7 +24,7 @@ class C_doctor_siloam extends CI_Controller {
 		$data1 = array();
 
 		$this->db->select('*');
-		$this->db->from('doctor');
+		$this->db->from('doctor_siloam_jambi');
 		$this->db->where('no', count($doctor_name));
 		$query = $this->db->get();
 
@@ -59,7 +59,7 @@ class C_doctor_siloam extends CI_Controller {
 		$data1 = array();
 
 		$this->db->select('*');
-		$this->db->from('doctor');
+		$this->db->from('doctor_siloam_cikarang');
 		$this->db->where('no', count($doctor_name));
 		$query = $this->db->get();
 
@@ -83,24 +83,29 @@ class C_doctor_siloam extends CI_Controller {
 		$this->load->view('v_doctor_siloam_cikarang', array('list_data' => $data1));
     }
 
-    public function schedule_siloam(){
+    public function schedule_siloam_jambi(){
     	$url = "http://www.siloamhospitals.com/doctors/find.html?hospital=22";
-    	$html = file_get_html($url);
     	$url_2 = "http://www.siloamhospitals.com/doctors/find.html?hospital=17";
+    	$html = file_get_html($url);
     	$html_2 = file_get_html($url_2);
     	$link = array(
-    					'link_doctor' => $html->find('div[class="col-md-11"] a'),
-    					'link_doctor_2' => $html_2->find('div[class="col-md-11"] a')
+    					'link_doctor' => $html->find('li[class="row"] div a'),
+    					'link_doctor_2' => $html_2->find('li[class="row"] div a')
     				 );
 
-    	$this->load->view('v_schedule', $link);
+    	$this->load->view('v_schedule_siloam_jambi', $link);
     }
-    
+    public function schedule_siloam_cikarang(){
+    	$url = "http://www.siloamhospitals.com/doctors/find.html?hospital=22";
+    	$url_2 = "http://www.siloamhospitals.com/doctors/find.html?hospital=17";
+    	$html = file_get_html($url);
+    	$html_2 = file_get_html($url_2);
+    	$link = array(
+    					'link_doctor' => $html->find('li[class="row"] div a'),
+    					'link_doctor_2' => $html_2->find('li[class="row"] div a')
+    				 );
 
-    public function search_doctor(){
-
-    	$this->load->view('v_search');
-
+    	$this->load->view('v_schedule_siloam_cikarang', $link);
     }
 }
 

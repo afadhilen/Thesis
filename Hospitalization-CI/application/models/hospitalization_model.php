@@ -45,11 +45,11 @@ class Hospitalization_model extends CI_Model {
         $query2 = $this->db->select('*')->like('name', $name)->get('doctor_siloam_cikarang');
 
         if ($name == ""){
-            return "Empty field-box!";
+            $output .= "Empty field-box!";
         }
         else{
         if ($query1->num_rows() == 0 || $query2->num_rows() == 0 ) {
-            return 'There was no search result!';
+            $output .= 'There was no search result!';
         } else {
             foreach ($query1->result() as $data) {
                 $output .= '<tr> <td>' .$data->no.'</td> <td>' .$data->name.'</td> <td>'.$data->specialist. '</td> <td>'.$data->hospital.'</td></tr>';

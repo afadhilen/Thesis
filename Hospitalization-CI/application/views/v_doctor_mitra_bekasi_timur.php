@@ -10,60 +10,42 @@
 		<title>Doctors Data</title>
 	</head>
 	<body>
-	<table>
-	<tr>
-		<!-- <th>Doctor No-Entry</th>
-		<th>Doctor Name</th>
-		<th>Doctor Specialist</th>
-		<th>Hospital Name</th>
-		<th>Hospital Address</th> -->
-	</tr>
-	<?php foreach ($name_1 as $doc_name_1) { ?>
-	<tr>
-		<td><?php echo $doc_name_1;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_2 as $doc_name_2) { ?>
-	<tr>
-		<td><?php echo $doc_name_2;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_3 as $doc_name_3) { ?>
-	<tr>
-		<td><?php echo $doc_name_3;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_4 as $doc_name_4) { ?>
-	<tr>
-		<td><?php echo $doc_name_4;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_4 as $doc_name_4) { ?>
-	<tr>
-		<td><?php echo $doc_name_4;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_5 as $doc_name_5) { ?>
-	<tr>
-		<td><?php echo $doc_name_5;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_6 as $doc_name_6) { ?>
-	<tr>
-		<td><?php echo $doc_name_6;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_7 as $doc_name_7) { ?>
-	<tr>
-		<td><?php echo $doc_name_7;?></td>
-	</tr>
-		<?php } ?>
-		<?php foreach ($name_8 as $doc_name_8) { ?>
-	<tr>
-		<td><?php echo $doc_name_8;?></td>
-	</tr>
-		<?php } ?>
-	</table>
-		<a href = '<?php echo base_url() . 'c_doctor_mitra/' ?>' class="btn btn-primary btn-block btn-sm" size="15"> Back </a>
+	<?php $this->load->view('includes/nav-header.php'); ?>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+        <div class='.col-xs-12 .col-sm-6 .col-md-8'>
+            <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                <div class="panel-heading"><h4>Hospital Data</h4></div>
+                    <!-- Table -->
+                <table class="table">
+                    <table class ="table-responsive">
+                       	<center>
+                       		<table class ="table table-striped table-hover">
+                       			<tr>
+                       				<th>Doctor No-Entry</th>
+                       				<th>Doctor Name</th>
+                       				<th>Doctor Specialist</th>
+                       				<th>Hospital Name</th>
+                       			</tr>
+                       			<?php foreach ($list_data as $data) { ?>
+                       			<tr>
+                       				<td><?php echo $data['no'];?></td>
+                       				<td><?php echo $data['name'];?></td>
+                       				<td><?php echo $data['specialist'];?></td>
+                       				<td><?php echo $data['hospital'];?></td>
+                       				<td><?php echo $data['address'];?></td>
+                       			</tr>
+                       			<?php } ?>
+                       		</table>
+                       	</center>
+                       </table>
+                   </table>
+               </div>
+           </div>
+       </div>
+		<!-- <a href = '<?php echo base_url() . 'c_index/home' ?>' class="btn btn-primary btn-block btn-sm" size="15"> Back </a> -->
 	</body>
 </html>

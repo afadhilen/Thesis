@@ -10,11 +10,9 @@
 		<title>Doctors Data</title>
 	</head>
 	<body>
-		<?php 
-		echo $name;
-		echo "<br/>";
-		foreach ($spec as $specialist) {
-			echo($specialist);
+		<?php
+		foreach ($name as $table) {
+			echo($table);
 		}
 		?>
 		<a href = '<?php echo base_url() . 'c_doctor_siloam/' ?>' class="btn btn-primary btn-block btn-sm" size="15"> Back </a>
