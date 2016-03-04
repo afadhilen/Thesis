@@ -11,13 +11,11 @@ class C_annisa extends CI_Controller {
     	$url = "http://rsannisa-cikarang.com/index.php/2015-09-29";
 		$html = file_get_html($url);
 
-		$h_name = $html->find('div[class="entry clearfix"] p strong', 0);
-		$specialist = $html->find('div[class="entry clearfix"] ul');
-
+		$table = $html->find('section[class="entry-content"] div[class="wrapper"] div[class="supertable-col supertable-col-first supertable-col-odd supertable-col-1"]')->plaintext;
 		$data = array(
-				'name' => $h_name,
-				'spec' => $specialist
+				'name' => $table
 				);
+
         $this->load->view('v_annisa', $data);
     }
 }
